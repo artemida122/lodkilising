@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoatLease - Лизинг лодок и катеров</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1><i class="fas fa-ship"></i> Boat<span>Lease</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#" class="nav-link" data-page="catalog"><i class="fas fa-list"></i> Каталог</a></li>
+                    <li><a href="#" class="nav-link" data-page="leasing"><i class="fas fa-file-contract"></i> Условия</a></li>
+                    <li><a href="#" class="nav-link" data-page="about"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact"><i class="fas fa-phone-alt"></i> Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главная страница -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Лизинг лодок и катеров</h1>
+                    <p>Идеальное решение для приобретения водного транспорта без больших первоначальных вложений</p>
+                    <a href="#" class="btn nav-link" data-page="catalog">Выбрать лодку</a>
+                    <a href="#" class="btn btn-outline nav-link" data-page="leasing">Условия лизинга</a>
+                </div>
+            </div>
+        </div>
+        
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Почему выбирают нас</h2>
+                    <p>Мы предлагаем лучшие условия лизинга лодок и катеров на рынке</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-percent"></i>
+                        <h3>Выгодные ставки</h3>
+                        <p>От 5% годовых с минимальным пакетом документов</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Быстрое оформление</h3>
+                        <p>Решение по заявке за 1 день, доставка в любой регион</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-undo"></i>
+                        <h3>Возврат техники</h3>
+                        <p>Возможность вернуть лодку в конце срока лизинга</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Круглосуточная поддержка</h3>
+                        <p>Консультации по любым вопросам 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Каталог лодок -->
+    <div id="catalog" class="page">
+        <section class="container">
+            <div class="section-title">
+                <h2>Каталог лодок</h2>
+                <p>Выберите подходящую лодку для лизинга из нашего каталога</p>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="type">Тип лодки</label>
+                        <select id="type">
+                            <option value="all">Все типы</option>
+                            <option value="fishing">Рыболовные</option>
+                            <option value="sport">Спортивные</option>
+                            <option value="yacht">Яхты</option>
+                            <option value="inflatable">Надувные</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="price">Цена, руб/мес</label>
+                        <select id="price">
+                            <option value="all">Любая</option>
+                            <option value="low">До 20 000</option>
+                            <option value="medium">20 000 - 50 000</option>
+                            <option value="high">Более 50 000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="length">Длина, м</label>
+                        <select id="length">
+                            <option value="all">Любая</option>
+                            <option value="small">До 5</option>
+                            <option value="medium">5 - 8</option>
+                            <option value="large">Более 8</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="brand">Бренд</label>
+                        <select id="brand">
+                            <option value="all">Все бренды</option>
+                            <option value="bayliner">Bayliner</option>
+                            <option value="sea-ray">Sea Ray</option>
+                            <option value="quicksilver">Quicksilver</option>
+                            <option value="azimut">Azimut</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="boats-grid">
+                <div class="boat-card">
+                    <div class="boat-img">
+                        <img src="6832814_20190524091148569_1_XLARGE.jpg" alt="Bayliner VR5">
+                    </div>
+                    <div class="boat-content">
+                        <span class="boat-type">Спортивный катер</span>
+                        <h3>Bayliner VR5</h3>
+                        <div class="boat-specs">
+                            <div class="boat-spec">
+                                <i class="fas fa-ruler"></i>
+                                <div>5.2 м</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-user-friends"></i>
+                                <div>5 чел</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>65 км/ч</div>
+                            </div>
+                        </div>
+                        <div class="boat-price">25 900 <span>руб/мес</span></div>
+                        <a href="#" class="btn nav-link" data-page="leasing">Оформить лизинг</a>
+                    </div>
+                </div>
+                
+                <div class="boat-card">
+                    <div class="boat-img">
+                        <img src="1823552192.jpg" alt="Quicksilver Activ 675">
+                    </div>
+                    <div class="boat-content">
+                        <span class="boat-type">Рыболовная лодка</span>
+                        <h3>Quicksilver Activ 675</h3>
+                        <div class="boat-specs">
+                            <div class="boat-spec">
+                                <i class="fas fa-ruler"></i>
+                                <div>6.75 м</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-user-friends"></i>
+                                <div>6 чел</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>50 км/ч</div>
+                            </div>
+                        </div>
+                        <div class="boat-price">18 500 <span>руб/мес</span></div>
+                        <a href="#" class="btn nav-link" data-page="leasing">Оформить лизинг</a>
+                    </div>
+                </div>
+                
+                <div class="boat-card">
+                    <div class="boat-img">
+                        <img src="ff2d16aefce5.jpg" alt="Sea Ray Sundancer">
+                    </div>
+                    <div class="boat-content">
+                        <span class="boat-type">Яхта</span>
+                        <h3>Sea Ray Sundancer 320</h3>
+                        <div class="boat-specs">
+                            <div class="boat-spec">
+                                <i class="fas fa-ruler"></i>
+                                <div>9.8 м</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-user-friends"></i>
+                                <div>8 чел</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>75 км/ч</div>
+                            </div>
+                        </div>
+                        <div class="boat-price">72 300 <span>руб/мес</span></div>
+                        <a href="#" class="btn nav-link" data-page="leasing">Оформить лизинг</a>
+                    </div>
+                </div>
+                
+                <div class="boat-card">
+                    <div class="boat-img">
+                        <img src="Screenshot_20190925-120324_Drive-1080x675.jpg" alt="Azimut S6">
+                    </div>
+                    <div class="boat-content">
+                        <span class="boat-type">Яхта премиум</span>
+                        <h3>Azimut S6</h3>
+                        <div class="boat-specs">
+                            <div class="boat-spec">
+                                <i class="fas fa-ruler"></i>
+                                <div>17.5 м</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-user-friends"></i>
+                                <div>12 чел</div>
+                            </div>
+                            <div class="boat-spec">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>85 км/ч</div>
+                            </div>
+                        </div>
+                        <div class="boat-price">215 000 <span>руб/мес</span></div>
+                        <a href="#" class="btn nav-link" data-page="leasing">Оформить лизинг</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Условия лизинга -->
+    <div id="leasing" class="page">
+        <section class="container">
+            <div class="section-title">
+                <h2>Условия лизинга</h2>
+                <p>Простая и понятная схема оформления лизинга лодок и катеров</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card" data-step="1">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Заявка</h3>
+                    <p>Оставьте заявку на сайте или позвоните нам</p>
+                </div>
+                
+                <div class="step-card" data-step="2">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Рассмотрение</h3>
+                    <p>Мы рассмотрим вашу заявку в течение 1 дня</p>
+                </div>
+                
+                <div class="step-card" data-step="3">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Договор</h3>
+                    <p>Подписываем договор лизинга</p>
+                </div>
+                
+                <div class="step-card" data-step="4">
+                    <i class="fas fa-ship"></i>
+                    <h3>Получение</h3>
+                    <p>Вы получаете лодку и начинаете использовать</p>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 80px;">
+                <h2>Требования к клиентам</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Физлица</h3>
+                    <p>Возраст от 23 лет, гражданство РФ</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Юрлица</h3>
+                    <p>Любая форма собственности, срок регистрации от 6 мес</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-passport"></i>
+                    <h3>Документы</h3>
+                    <p>Паспорт, ИНН, справка о доходах</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-money-check-alt"></i>
+                    <h3>Первоначальный взнос</h3>
+                    <p>От 10% стоимости лодки</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- О компании -->
+    <div id="about" class="page">
+        <section class="container">
+            <div class="section-title">
+                <h2>О компании</h2>
+                <p>Лидер на рынке лизинга водного транспорта с 2010 года</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>BoatLease - ваш надежный партнер в лизинге лодок</h2>
+                    <p>Мы специализируемся на лизинге лодок и катеров различных классов - от небольших рыбацких лодок до премиальных яхт. Наша компания была основана в 2010 году и за это время помогла более 5 000 клиентам осуществить свою мечту о водном транспорте.</p>
+                    <p>Наша миссия - сделать владение лодкой доступным для каждого. Мы предлагаем гибкие условия лизинга, индивидуальный подход к каждому клиенту и профессиональное сопровождение на всех этапах сделки.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3>13+</h3>
+                            <p>Лет на рынке</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>5 000+</h3>
+                            <p>Довольных клиентов</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>120+</h3>
+                            <p>Моделей лодок</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>24/7</h3>
+                            <p>Поддержка клиентов</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-img">
+                    <img src="4607a381099245.5cf5347ad4b87.jpg" alt="О компании">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Контакты -->
+    <div id="contact" class="page">
+        <section class="container">
+            <div class="section-title">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами для консультации по лизингу лодок</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Наши контактные данные</h2>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Адрес</h3>
+                            <p>г.Кашира, ул.Садовая, 23</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Телефон</h3>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>kashiralisinglodok@boat.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Часы работы</h3>
+                            <p>Пн-Пт: 9:00 - 20:00</p>
+                            <p>Сб-Вс: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Отправить сообщение</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-name">Ваше имя</label>
+                            <input type="text" id="contact-name" placeholder="Иван Иванов">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-phone">Телефон</label>
+                            <input type="tel" id="contact-phone" placeholder="+7 (999) 123-45-67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" placeholder="kashiralisinglodok@boat.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Сообщение</label>
+                            <textarea id="contact-message" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>BoatLease</h4>
+                    <p>Лизинг лодок и катеров на выгодных условиях. Более 120 моделей на любой вкус и бюджет.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
+                        <li><a href="#" class="nav-link" data-page="catalog">Каталог лодок</a></li>
+                        <li><a href="#" class="nav-link" data-page="leasing">Условия лизинга</a></li>
+                        <li><a href="#" class="nav-link" data-page="about">О компании</a></li>
+                        <li><a href="#" class="nav-link" data-page="contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Категории лодок</h4>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="catalog">Рыболовные лодки</a></li>
+                        <li><a href="#" class="nav-link" data-page="catalog">Спортивные катера</a></li>
+                        <li><a href="#" class="nav-link" data-page="catalog">Прогулочные яхты</a></li>
+                        <li><a href="#" class="nav-link" data-page="catalog">Надувные лодки</a></li>
+                        <li><a href="#" class="nav-link" data-page="catalog">Премиум сегмент</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г.Кашира, ул.Садовая, 23</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> kashiralisinglodok@boat.ru</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BoatLease. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Навигация по страницам
+        document.addEventListener('DOMContentLoaded', function() {
+            // Элементы страниц
+            const pages = document.querySelectorAll('.page');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('nav ul');
+            
+            // Активация страницы
+            function activatePage(pageId) {
+                // Скрыть все страницы
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Показать выбранную страницу
+                const activePage = document.getElementById(pageId);
+                if (activePage) {
+                    activePage.classList.add('active');
+                }
+                
+                // Обновить активную ссылку в навигации
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                // Закрыть мобильное меню
+                navMenu.classList.remove('show');
+                
+                // Прокрутка вверх
+                window.scrollTo(0, 0);
+            }
+            
+            // Обработчики навигации
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.dataset.page;
+                    activatePage(pageId);
+                });
+            });
+            
+            // Мобильное меню
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+            
+            // Закрытие меню при клике вне его
+            document.addEventListener('click', function(e) {
+                if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    navMenu.classList.remove('show');
+                }
+            });
+            
+            // Фильтрация лодок (демо)
+            document.querySelectorAll('.filter-group select').forEach(select => {
+                select.addEventListener('change', function() {
+                    alert('Фильтр применен: ' + this.options[this.selectedIndex].text);
+                });
+            });
+            
+            // Обработка формы
+            document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
